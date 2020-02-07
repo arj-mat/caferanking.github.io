@@ -5,7 +5,7 @@ fetch("https://caferanking.000webhostapp.com/get.php?&e=json&f=cafe")
 .then(function(data) {
     var ranking = Object.entries(data).sort((a, b) => a[1] < b[1])
     for (var i = 0; i < 100; i++) {
-        varr tr = document.createElement("tr");
+        var tr = document.createElement("tr");
 
         var td = document.createElement("td");
         td.id = "position";
