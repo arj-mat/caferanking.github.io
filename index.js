@@ -3,7 +3,7 @@
 fetch("https://caferanking.000webhostapp.com/get.php?&e=json&f=cafe")
 .then((resp) => resp.json())
 .then(function(data) {
-    var ranking = Object.entries(data).sort((a, b) => a[1] < b[1])
+    var ranking = Object.entries(data).sort((a, b) => a[1] - b[1])
     for (var i = 0; i < 100; i++) {
         var tr = document.createElement("tr");
 
